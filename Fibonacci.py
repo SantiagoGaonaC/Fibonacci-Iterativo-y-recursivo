@@ -60,22 +60,22 @@ def proceso_cien():#ProcesoCien
             if m == 3:
                 medicion3.append(tiempo)
     suma_lista_100(medicion1, medicion2, medicion3)
-    f = open("ProcesoCien.txt", "a")#ProcesoCien
+    f = open("ProcesoCien.txt", "a")#Nombre del archivo de 1 a 100 datos de la sucesión.
     for i in Suma_lista:
         f.write((str(i))+"\n")
     f.close()
 
 def proceso_100k():#Proceso100k
-    k = 0
+    k = 0 # k = cantidad de mediciones
     contador = 0
     medicion_1 = []
     medicion_2 = []
     medicion_3 = []
-    while k < 3:
+    while k < 3: 
         k=k+1
         contador = 0
         while contador < 100000:#100k
-            contador = contador + 200
+            contador = contador + 200  #200 en 200 hasta sucesion 100.000 Fib  
             if contador < 100000:#100k
                 inicio = default_timer() * 1000
                 fib(contador-1)
@@ -99,12 +99,12 @@ def proceso_100k():#Proceso100k
                 if k == 3:
                     medicion_3.append(tiempo)
     suma_lista_100k(medicion_1, medicion_2, medicion_3)
-    f = open("ANASHEEEE.txt", "a")#Iterativo_Ultimo2 ANAHSE
+    f = open("Nombre_archivo.txt", "a")#Iterativo_Ultimo2 ANAHSE
     for i in Suma_listak:
         f.write((str(i))+"\n")
     f.close()
 
-# proceso_cien()
+proceso_cien()
 proceso_100k()
 
 
